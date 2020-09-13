@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.codecagon'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    annotationProcessor group: 'org.codecagon', name: 'code-generation', version: '1.0-SNAPSHOT'
+    implementation group: 'org.codecagon', name: 'code-generation', version: '1.0-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+}
